@@ -1,0 +1,10 @@
+<%= flash[:error] %>
+
+<div id="spawn" align = "center">
+  <img border="3" src="http://images2.wikia.nocookie.net/__cb20100806170248/demigods/images/thumb/8/84/Hephaestus.jpg/830px-Hephaestus.jpg" height = "200" width = "300"/>
+  <div id="spawn">
+  <h3> Edit Gladiator </h3>
+  <%= form_tag create_fighter_path(@gladiator), :method => 'put' do %>
+  <%= render 'form', :submit_label => 'Save' %>
+  <% end %>
+</div>

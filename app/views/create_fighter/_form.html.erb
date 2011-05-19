@@ -1,0 +1,21 @@
+         <p>
+          <%= label_tag :name %>
+          <%= text_field :gladiator, :name, :value => @gladiator.name %>
+          </p>
+          <p>
+          <%= label_tag :strength %>
+          <%= text_field :gladiator, :strength, :value => @gladiator.strength %>
+          </p>
+          <p>
+          <%= label_tag :intelligence  %>
+          <%= text_field :gladiator, :intelligence, :value => @gladiator.intelligence %>
+          </p>
+          <p>
+          <%= label_tag :agility %>
+          <%= text_field :gladiator, :agility, :value => @gladiator.agility %>
+          </p>
+          <p>
+          <%= label_tag :damage %>
+          <%= text_field :gladiator, :damage, :value => @gladiator.damage %>
+          </p>
+          <%= submit_tag submit_label %> <%= button_to_function 'Cancel', %Q{window.location='/main'}%>

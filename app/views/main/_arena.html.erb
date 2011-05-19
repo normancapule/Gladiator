@@ -1,0 +1,14 @@
+<img border="3" src="http://t0.gstatic.com/images?q=tbn:ANd9GcTJkvEdznFkQn4U_aT0rLb3ONoOarJSBEWxcOM6V1_wUexwR9gm"/>
+<h3>ARENA</h3>
+<p> 
+<%=label_tag Gladiator.find(session[:fighter1]).name rescue ""%> 
+<b style="color:red">VS</b> 
+<%= label_tag Gladiator.find(session[:fighter2]).name rescue ""%>
+</p>
+<p style="color:green"><%=flash[:fight_out]%></p>
+<%= form_tag 'main/random', :method => :post do %>
+  <%= submit_tag "OPEN THE CAGE" %>
+  <%end%>
+  <%= form_tag 'main/fight', :method => :post do %>
+  <%= submit_tag "FIGHT" %>
+<%end%>

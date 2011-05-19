@@ -1,0 +1,13 @@
+<img border="3" src="http://memberfiles.freewebs.com/75/74/44407475/photos/Bloody-Hell-Anime-Wallpapers/4%20fate%20stay%20night%20coup%20de%20grace.jpg" height = "200" width = "300"/>
+<h3>FIGHT HISTORY</h3>
+<%= button_to "Clear History", :action => 'clear_history' %>
+
+<div id="history_list">
+<%  @fight_history.each do |fight_inside|%>
+  <p>
+  <%=fight_inside.winner.name rescue "Deleted"%> VS. <%=fight_inside.losser.name rescue "Deleted"%><br>
+  Winner:<%=fight_inside.winner.name rescue "Deleted"%><br>
+  Loser:<%=fight_inside.losser.name rescue "Deleted"%>
+  </p>
+<%end%>
+</div>

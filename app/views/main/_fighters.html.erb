@@ -1,0 +1,12 @@
+<img border="3" src="http://t1.gstatic.com/images?q=tbn:ANd9GcQXTmkdDtxYwKG46G2OkyuMMwjj7PPvFw9MBjWvN3AX9g52Lrk_vA"/>
+<h3>GLADIATOR ROSTER</h3>  
+<%=  button_to "Create a Gladiator", create_fighter_index_path, :method=>"get"%>
+<div id="list_of_fighters">
+<%  @list.each do |list_inside|%>
+    <p><%=list_inside.name%> 
+    <br>Wins:<%=list_inside.win%> Losses:<%=list_inside.loss%> 
+    <br><%=link_to "Edit", edit_create_fighter_path(list_inside.id), :method => "get" %> 
+      <%=link_to "Kill", create_fighter_path(list_inside.id), :method => "delete", :confirm => "Are you sure?! This will cost money!!!" %>
+    </p>
+<%end%>
+</div>
